@@ -12,8 +12,6 @@ jobs:
           ref: develop
       - name: Modify helm chart version
         run: sed -i "s/version:.*/version:\ 0.0.0/g" charts/dind/Chart.yaml
-      - name: Modify docker image version
-        run: sed -i "s/tag:.*/tag:\ \"0.0.0\"/g" charts/dind/values.yaml
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
