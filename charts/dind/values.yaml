@@ -1,0 +1,5 @@
+image:
+  name: "docker"
+  tag: "stable-dind"
+docker:
+  port: 2375

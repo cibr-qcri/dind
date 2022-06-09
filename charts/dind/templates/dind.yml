@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dind-deployment
+  labels:
+    app: dind
+    tier: docker-in-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dind
+      tier: docker-in-docker
+  template:
+    metadata:
+      labels:
+        app: dind
+        tier: docker-in-docker
+    spec:
+      containers:
+        - name: dind
+          image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+          imagePullPolicy: IfNotPresent
