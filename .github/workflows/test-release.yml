@@ -27,4 +27,4 @@ jobs:
           charts_dir: charts
           commit_username: "GitHub Actions"
           commit_email: noreply@github.com
-          token: ${{ secrets.TOSHI_BOT_TOKEN }}
+          token: ${{ secrets.CIBR_BOT_TOKEN }}
