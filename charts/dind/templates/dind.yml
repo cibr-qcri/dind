@@ -22,3 +22,5 @@ spec:
         - name: dind
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
